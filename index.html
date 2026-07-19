@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>سياسة الخصوصية — موصل الشحنات | Privacy Policy — Cargo Courier</title>
+<title>Privacy Policy — Cargo Courier | سياسة الخصوصية — موصل الشحنات</title>
 <style>
   :root {
     --navy: #0f1e33; --orange: #ff8a1e; --gold: #ffd23f;
@@ -20,25 +20,38 @@
   }
   .hero {
     background: linear-gradient(135deg, #0f1e33 0%, #1c3560 60%, #24406f 100%);
-    color: #fff; padding: 40px 22px 46px; text-align: center; position: relative; overflow: hidden;
+    color: #fff; padding: 38px 22px 40px; text-align: center; position: relative; overflow: hidden;
   }
   .hero::after {
     content: ""; position: absolute; top: -60px; inset-inline-end: -40px; width: 260px; height: 260px;
     background: radial-gradient(circle, rgba(255,210,63,0.28), transparent 70%); pointer-events: none;
   }
-  .badge { margin-bottom: 14px; }
   .badge svg { width: 56px; height: 56px; filter: drop-shadow(0 3px 8px rgba(0,0,0,0.35)); }
   .title {
-    font-size: 30px; font-weight: 900; margin: 0; letter-spacing: -0.5px;
+    font-size: 30px; font-weight: 900; margin: 8px 0 0; letter-spacing: -0.5px;
     background: linear-gradient(135deg, var(--orange), var(--gold));
     -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
   }
   .sub { margin: 6px 0 0; font-size: 15px; color: #b9c9e6; font-weight: 600; }
   .updated {
-    display: inline-block; margin-top: 16px; font-size: 12.5px; font-weight: 700;
+    display: inline-block; margin-top: 14px; font-size: 12.5px; font-weight: 700;
     color: #0f1e33; background: var(--gold); padding: 5px 14px; border-radius: 999px;
   }
-  .wrap { max-width: 760px; margin: -22px auto 0; padding: 0 18px; }
+  /* مبدّل اللغة */
+  .langbar {
+    max-width: 820px; margin: 18px auto 4px; padding: 0 14px;
+    display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+  }
+  .langbar button {
+    padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px;
+    background: var(--card); color: var(--ink); font-family: inherit; font-size: 14px;
+    font-weight: 700; cursor: pointer; transition: transform .08s;
+  }
+  .langbar button:hover { transform: translateY(-1px); }
+  .langbar button.active {
+    background: linear-gradient(135deg, var(--orange), #ff6a3d); color: #fff; border-color: transparent;
+  }
+  .wrap { max-width: 760px; margin: 16px auto 0; padding: 0 18px; }
   .card {
     background: var(--card); border: 1px solid var(--line); border-radius: 18px;
     padding: 22px 24px; margin-bottom: 16px; box-shadow: 0 10px 30px rgba(15,30,51,0.08);
@@ -50,8 +63,7 @@
   .card a { color: var(--orange); font-weight: 700; text-decoration: none; }
   .card a:hover { text-decoration: underline; }
   .card b { color: var(--ink); }
-  .lang-label { max-width: 760px; margin: 22px auto 10px; padding: 0 20px; font-size: 12px; font-weight: 800; letter-spacing: 1.5px; color: var(--muted); text-transform: uppercase; }
-  .foot { text-align: center; color: var(--muted); font-size: 13px; margin-top: 34px; padding: 0 18px; }
+  .foot { text-align: center; color: var(--muted); font-size: 13px; margin-top: 30px; padding: 0 18px; }
   .foot b { color: var(--ink); }
 </style>
 </head>
@@ -67,41 +79,107 @@
         <rect x="10" y="18" width="4" height="10" rx="2" fill="#b9bfca"/>
       </svg>
     </div>
-    <h1 class="title">موصل الشحنات — Cargo Courier</h1>
-    <p class="sub">سياسة الخصوصية · Privacy Policy</p>
-    <div class="updated">آخر تحديث · Last updated: 19 / 07 / 2026</div>
+    <h1 class="title">Cargo Courier — موصل الشحنات</h1>
+    <p class="sub" id="subtitle">Privacy Policy</p>
+    <div class="updated"><span id="updatedLbl">Last updated</span>: 19 / 07 / 2026</div>
   </header>
 
-  <div class="lang-label" dir="rtl">العربية</div>
-  <main class="wrap" dir="rtl">
-    <section class="card"><h2><span class="tag"></span>البيانات التي نجمعها</h2>
-      <p>لعبة «موصل الشحنات» لا تطلب أي حساب، ولا تجمع أي بيانات شخصية تعريفية (اسم، بريد إلكتروني، رقم هاتف، أو موقع دقيق). نتائجك وتقدّمك في اللعبة تُحفَظ محليًا على جهازك فقط ولا تُرسَل إلى أي خادم.</p></section>
-    <section class="card"><h2><span class="tag"></span>الإعلانات</h2>
-      <p>تعرض اللعبة إعلانات عبر خدمة <b>Google AdMob</b>. قد تجمع AdMob تلقائيًا بيانات مثل «معرّف الإعلان» الخاص بجهازك وبيانات استخدام تقريبية، وذلك لعرض إعلانات ملائمة وقياس أدائها، وفق <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a>.</p>
-      <p>يمكنك في أي وقت إعادة تعيين «معرّف الإعلان» أو إلغاء تفعيل الإعلانات المخصّصة من إعدادات نظام أندرويد.</p></section>
-    <section class="card"><h2><span class="tag"></span>الأطفال</h2>
-      <p>اللعبة مناسبة لعمر 13 عامًا فأكثر، ولا تستهدف الأطفال دون هذا العمر.</p></section>
-    <section class="card"><h2><span class="tag"></span>حذف البيانات</h2>
-      <p>حذف التطبيق من جهازك يمحو كل بياناته المحلية نهائيًا.</p></section>
-    <section class="card"><h2><span class="tag"></span>تواصل معنا</h2>
-      <p>لأي استفسار حول الخصوصية، راسلنا على: <b>aliorini1996@gmail.com</b></p></section>
-  </main>
+  <nav class="langbar" id="langbar"></nav>
 
-  <div class="lang-label" dir="ltr">English</div>
-  <main class="wrap" dir="ltr">
-    <section class="card"><h2><span class="tag"></span>Data we collect</h2>
-      <p>Cargo Courier requires no account and collects no personally identifiable information (name, email, phone number, or precise location). Your scores and progress are stored locally on your device only and are never sent to any server.</p></section>
-    <section class="card"><h2><span class="tag"></span>Advertising</h2>
-      <p>The game shows ads through <b>Google AdMob</b>. AdMob may automatically collect data such as your device's Advertising ID and approximate usage data to serve and measure ads, in accordance with the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
-      <p>You can reset your Advertising ID or opt out of personalized ads at any time from your Android system settings.</p></section>
-    <section class="card"><h2><span class="tag"></span>Children</h2>
-      <p>The game is intended for ages 13 and older and does not target younger children.</p></section>
-    <section class="card"><h2><span class="tag"></span>Data deletion</h2>
-      <p>Uninstalling the app permanently deletes all of its local data.</p></section>
-    <section class="card"><h2><span class="tag"></span>Contact</h2>
-      <p>For any privacy questions, contact us at: <b>aliorini1996@gmail.com</b></p></section>
-  </main>
+  <main class="wrap" id="content"></main>
 
   <p class="foot"><b>Cargo Courier</b> · موصل الشحنات &nbsp;—&nbsp; com.cargocourier.game</p>
+
+<script>
+const G = 'https://policies.google.com/privacy';
+const T = {
+  en: { name:'English', dir:'ltr', title:'Privacy Policy', updated:'Last updated',
+    data_h:'Data we collect', data_p:"Cargo Courier requires no account and collects no personally identifiable information (name, email, phone number, or precise location). Your scores and progress are stored locally on your device only and are never sent to any server.",
+    ads_h:'Advertising', ads_p1:'The game shows ads through <b>Google AdMob</b>. AdMob may automatically collect data such as your device’s Advertising ID and approximate usage data to serve and measure ads, in accordance with the <a href="'+G+'" target="_blank" rel="noopener">Google Privacy Policy</a>.', ads_p2:'You can reset your Advertising ID or opt out of personalized ads at any time from your Android system settings.',
+    ch_h:'Children', ch_p:'The game is intended for ages 13 and older and does not target younger children.',
+    del_h:'Data deletion', del_p:'Uninstalling the app permanently deletes all of its local data.',
+    con_h:'Contact', con_p:'For any privacy questions, contact us at: <b>aliorini1996@gmail.com</b>' },
+  ar: { name:'العربية', dir:'rtl', title:'سياسة الخصوصية', updated:'آخر تحديث',
+    data_h:'البيانات التي نجمعها', data_p:'لعبة «موصل الشحنات» لا تطلب أي حساب، ولا تجمع أي بيانات شخصية تعريفية (اسم، بريد إلكتروني، رقم هاتف، أو موقع دقيق). نتائجك وتقدّمك في اللعبة تُحفَظ محليًا على جهازك فقط ولا تُرسَل إلى أي خادم.',
+    ads_h:'الإعلانات', ads_p1:'تعرض اللعبة إعلانات عبر خدمة <b>Google AdMob</b>. قد تجمع AdMob تلقائيًا بيانات مثل «معرّف الإعلان» الخاص بجهازك وبيانات استخدام تقريبية، لعرض إعلانات ملائمة وقياس أدائها، وفق <a href="'+G+'" target="_blank" rel="noopener">سياسة خصوصية Google</a>.', ads_p2:'يمكنك في أي وقت إعادة تعيين «معرّف الإعلان» أو إلغاء تفعيل الإعلانات المخصّصة من إعدادات نظام أندرويد.',
+    ch_h:'الأطفال', ch_p:'اللعبة مناسبة لعمر 13 عامًا فأكثر، ولا تستهدف الأطفال دون هذا العمر.',
+    del_h:'حذف البيانات', del_p:'حذف التطبيق من جهازك يمحو كل بياناته المحلية نهائيًا.',
+    con_h:'تواصل معنا', con_p:'لأي استفسار حول الخصوصية، راسلنا على: <b>aliorini1996@gmail.com</b>' },
+  es: { name:'Español', dir:'ltr', title:'Política de privacidad', updated:'Última actualización',
+    data_h:'Datos que recopilamos', data_p:'Cargo Courier no requiere cuenta y no recopila información de identificación personal (nombre, correo electrónico, número de teléfono o ubicación precisa). Tus puntuaciones y tu progreso se guardan solo localmente en tu dispositivo y nunca se envían a ningún servidor.',
+    ads_h:'Publicidad', ads_p1:'El juego muestra anuncios a través de <b>Google AdMob</b>. AdMob puede recopilar automáticamente datos como el identificador de publicidad de tu dispositivo y datos de uso aproximados para mostrar y medir anuncios, de acuerdo con la <a href="'+G+'" target="_blank" rel="noopener">Política de privacidad de Google</a>.', ads_p2:'Puedes restablecer tu identificador de publicidad o desactivar los anuncios personalizados en cualquier momento desde la configuración de tu sistema Android.',
+    ch_h:'Niños', ch_p:'El juego está destinado a mayores de 13 años y no está dirigido a niños más pequeños.',
+    del_h:'Eliminación de datos', del_p:'Desinstalar la aplicación elimina permanentemente todos sus datos locales.',
+    con_h:'Contacto', con_p:'Para cualquier pregunta sobre privacidad, contáctanos en: <b>aliorini1996@gmail.com</b>' },
+  pt: { name:'Português', dir:'ltr', title:'Política de Privacidade', updated:'Última atualização',
+    data_h:'Dados que coletamos', data_p:'O Cargo Courier não exige conta e não coleta informações de identificação pessoal (nome, e-mail, telefone ou localização precisa). Suas pontuações e seu progresso são armazenados apenas localmente no seu dispositivo e nunca são enviados a nenhum servidor.',
+    ads_h:'Publicidade', ads_p1:'O jogo exibe anúncios pelo <b>Google AdMob</b>. O AdMob pode coletar automaticamente dados como o ID de publicidade do seu dispositivo e dados de uso aproximados para veicular e medir anúncios, de acordo com a <a href="'+G+'" target="_blank" rel="noopener">Política de Privacidade do Google</a>.', ads_p2:'Você pode redefinir seu ID de publicidade ou desativar os anúncios personalizados a qualquer momento nas configurações do sistema Android.',
+    ch_h:'Crianças', ch_p:'O jogo é destinado a maiores de 13 anos e não é direcionado a crianças menores.',
+    del_h:'Exclusão de dados', del_p:'Desinstalar o app exclui permanentemente todos os seus dados locais.',
+    con_h:'Contato', con_p:'Para qualquer dúvida sobre privacidade, entre em contato: <b>aliorini1996@gmail.com</b>' },
+  fr: { name:'Français', dir:'ltr', title:'Politique de confidentialité', updated:'Dernière mise à jour',
+    data_h:'Données que nous collectons', data_p:"Cargo Courier ne nécessite aucun compte et ne collecte aucune information personnelle identifiable (nom, e-mail, numéro de téléphone ou localisation précise). Vos scores et votre progression sont enregistrés uniquement en local sur votre appareil et ne sont jamais envoyés à un serveur.",
+    ads_h:'Publicité', ads_p1:'Le jeu affiche des publicités via <b>Google AdMob</b>. AdMob peut collecter automatiquement des données telles que l’identifiant publicitaire de votre appareil et des données d’utilisation approximatives pour diffuser et mesurer les publicités, conformément à la <a href="'+G+'" target="_blank" rel="noopener">Politique de confidentialité de Google</a>.', ads_p2:'Vous pouvez réinitialiser votre identifiant publicitaire ou désactiver les publicités personnalisées à tout moment dans les paramètres de votre système Android.',
+    ch_h:'Enfants', ch_p:'Le jeu est destiné aux personnes de 13 ans et plus et ne cible pas les enfants plus jeunes.',
+    del_h:'Suppression des données', del_p:"La désinstallation de l’application supprime définitivement toutes ses données locales.",
+    con_h:'Contact', con_p:'Pour toute question sur la confidentialité, contactez-nous à : <b>aliorini1996@gmail.com</b>' },
+  de: { name:'Deutsch', dir:'ltr', title:'Datenschutzerklärung', updated:'Zuletzt aktualisiert',
+    data_h:'Daten, die wir erfassen', data_p:'Cargo Courier erfordert kein Konto und erfasst keine personenbezogenen Daten (Name, E-Mail, Telefonnummer oder genauer Standort). Deine Punktzahlen und dein Fortschritt werden nur lokal auf deinem Gerät gespeichert und niemals an einen Server gesendet.',
+    ads_h:'Werbung', ads_p1:'Das Spiel zeigt Werbung über <b>Google AdMob</b>. AdMob kann automatisch Daten wie die Werbe-ID deines Geräts und ungefähre Nutzungsdaten erfassen, um Anzeigen auszuliefern und zu messen, gemäß der <a href="'+G+'" target="_blank" rel="noopener">Google-Datenschutzerklärung</a>.', ads_p2:'Du kannst deine Werbe-ID zurücksetzen oder personalisierte Werbung jederzeit in den Android-Systemeinstellungen deaktivieren.',
+    ch_h:'Kinder', ch_p:'Das Spiel ist für Personen ab 13 Jahren bestimmt und richtet sich nicht an jüngere Kinder.',
+    del_h:'Datenlöschung', del_p:'Das Deinstallieren der App löscht dauerhaft alle lokalen Daten.',
+    con_h:'Kontakt', con_p:'Bei Fragen zum Datenschutz kontaktiere uns unter: <b>aliorini1996@gmail.com</b>' },
+  ja: { name:'日本語', dir:'ltr', title:'プライバシーポリシー', updated:'最終更新',
+    data_h:'収集するデータ', data_p:'Cargo Courier はアカウントを必要とせず、個人を特定できる情報（氏名、メール、電話番号、正確な位置情報）を収集しません。スコアと進行状況はお使いの端末内にのみ保存され、サーバーに送信されることはありません。',
+    ads_h:'広告', ads_p1:'本ゲームは <b>Google AdMob</b> を通じて広告を表示します。AdMob は、広告の配信と測定のために、端末の広告 ID やおおよその利用データなどを自動的に収集する場合があります（<a href="'+G+'" target="_blank" rel="noopener">Google プライバシーポリシー</a>に準拠）。', ads_p2:'広告 ID のリセットやパーソナライズ広告のオプトアウトは、Android の設定からいつでも行えます。',
+    ch_h:'お子様について', ch_p:'本ゲームは13歳以上を対象としており、それより幼いお子様を対象としていません。',
+    del_h:'データの削除', del_p:'アプリをアンインストールすると、ローカルデータはすべて完全に削除されます。',
+    con_h:'お問い合わせ', con_p:'プライバシーに関するお問い合わせは次までご連絡ください: <b>aliorini1996@gmail.com</b>' },
+  ko: { name:'한국어', dir:'ltr', title:'개인정보처리방침', updated:'최종 업데이트',
+    data_h:'수집하는 데이터', data_p:'Cargo Courier는 계정이 필요 없으며 개인 식별 정보(이름, 이메일, 전화번호, 정확한 위치)를 수집하지 않습니다. 점수와 진행 상황은 기기에만 로컬로 저장되며 어떤 서버로도 전송되지 않습니다.',
+    ads_h:'광고', ads_p1:'이 게임은 <b>Google AdMob</b>을 통해 광고를 표시합니다. AdMob은 광고 게재 및 측정을 위해 기기의 광고 ID 및 대략적인 사용 데이터와 같은 정보를 자동으로 수집할 수 있습니다(<a href="'+G+'" target="_blank" rel="noopener">Google 개인정보처리방침</a> 준수).', ads_p2:'광고 ID 재설정 또는 맞춤 광고 거부는 Android 시스템 설정에서 언제든지 할 수 있습니다.',
+    ch_h:'어린이', ch_p:'이 게임은 만 13세 이상을 대상으로 하며 그보다 어린 어린이를 대상으로 하지 않습니다.',
+    del_h:'데이터 삭제', del_p:'앱을 삭제하면 모든 로컬 데이터가 영구적으로 삭제됩니다.',
+    con_h:'문의', con_p:'개인정보 관련 문의는 다음으로 연락해 주세요: <b>aliorini1996@gmail.com</b>' },
+  tr: { name:'Türkçe', dir:'ltr', title:'Gizlilik Politikası', updated:'Son güncelleme',
+    data_h:'Topladığımız veriler', data_p:'Cargo Courier hesap gerektirmez ve kişisel olarak tanımlanabilir bilgi (ad, e-posta, telefon numarası veya kesin konum) toplamaz. Puanlarınız ve ilerlemeniz yalnızca cihazınızda yerel olarak saklanır ve hiçbir sunucuya gönderilmez.',
+    ads_h:'Reklamlar', ads_p1:'Oyun, <b>Google AdMob</b> aracılığıyla reklam gösterir. AdMob, reklamları sunmak ve ölçmek için cihazınızın Reklam Kimliği ve yaklaşık kullanım verileri gibi verileri otomatik olarak toplayabilir (<a href="'+G+'" target="_blank" rel="noopener">Google Gizlilik Politikası</a> uyarınca).', ads_p2:'Reklam Kimliğinizi sıfırlayabilir veya kişiselleştirilmiş reklamları Android sistem ayarlarından istediğiniz zaman kapatabilirsiniz.',
+    ch_h:'Çocuklar', ch_p:'Oyun 13 yaş ve üzeri içindir ve daha küçük çocukları hedeflemez.',
+    del_h:'Veri silme', del_p:'Uygulamayı kaldırmak tüm yerel verilerini kalıcı olarak siler.',
+    con_h:'İletişim', con_p:'Gizlilikle ilgili her türlü soru için bize ulaşın: <b>aliorini1996@gmail.com</b>' },
+  it: { name:'Italiano', dir:'ltr', title:'Informativa sulla privacy', updated:'Ultimo aggiornamento',
+    data_h:'Dati che raccogliamo', data_p:"Cargo Courier non richiede alcun account e non raccoglie informazioni personali identificabili (nome, e-mail, numero di telefono o posizione precisa). I tuoi punteggi e i tuoi progressi vengono salvati solo localmente sul tuo dispositivo e non vengono mai inviati a nessun server.",
+    ads_h:'Pubblicità', ads_p1:"Il gioco mostra annunci tramite <b>Google AdMob</b>. AdMob può raccogliere automaticamente dati come l’ID pubblicità del tuo dispositivo e dati di utilizzo approssimativi per pubblicare e misurare gli annunci, in conformità con l’<a href=\""+G+"\" target=\"_blank\" rel=\"noopener\">Informativa sulla privacy di Google</a>.", ads_p2:'Puoi reimpostare il tuo ID pubblicità o disattivare gli annunci personalizzati in qualsiasi momento dalle impostazioni di sistema Android.',
+    ch_h:'Bambini', ch_p:'Il gioco è destinato a persone di età pari o superiore a 13 anni e non è rivolto a bambini più piccoli.',
+    del_h:'Eliminazione dei dati', del_p:"La disinstallazione dell’app elimina definitivamente tutti i suoi dati locali.",
+    con_h:'Contatti', con_p:'Per qualsiasi domanda sulla privacy, contattaci a: <b>aliorini1996@gmail.com</b>' },
+};
+const ORDER = ['en','ar','es','pt','fr','de','ja','ko','tr','it'];
+
+function render(code) {
+  const t = T[code];
+  document.documentElement.lang = code;
+  document.documentElement.dir = t.dir;
+  document.getElementById('subtitle').textContent = t.title;
+  document.getElementById('updatedLbl').textContent = t.updated;
+  const card = (h, ...ps) => '<section class="card"><h2><span class="tag"></span>'+h+'</h2>'+ps.map(p=>'<p>'+p+'</p>').join('')+'</section>';
+  document.getElementById('content').innerHTML =
+    card(t.data_h, t.data_p) + card(t.ads_h, t.ads_p1, t.ads_p2) +
+    card(t.ch_h, t.ch_p) + card(t.del_h, t.del_p) + card(t.con_h, t.con_p);
+  document.querySelectorAll('.langbar button').forEach(b => b.classList.toggle('active', b.dataset.l === code));
+  try { localStorage.setItem('cc_priv_lang', code); } catch(e){}
+}
+const bar = document.getElementById('langbar');
+ORDER.forEach(code => {
+  const b = document.createElement('button');
+  b.textContent = T[code].name; b.dataset.l = code; b.dir = T[code].dir;
+  b.onclick = () => render(code);
+  bar.appendChild(b);
+});
+// اللغة الأولية: المحفوظة، أو لغة المتصفح إن كانت مدعومة، وإلا الإنجليزية
+let init = 'en';
+try { const s = localStorage.getItem('cc_priv_lang'); if (s && T[s]) init = s; else { const n = (navigator.language||'en').slice(0,2); if (T[n]) init = n; } } catch(e){}
+render(init);
+</script>
 </body>
 </html>
