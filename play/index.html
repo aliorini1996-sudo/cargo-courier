@@ -8,8 +8,8 @@
     />
     <meta name="theme-color" content="#1b1e28" />
     <title>موصل الشحنات — Cargo Courier</title>
-    <script type="module" crossorigin src="./assets/index-2l14opCv.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DwbJCZgP.css">
+    <script type="module" crossorigin src="./assets/index-DE1w3FWV.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-U63SVcvL.css">
   </head>
   <body>
     <div id="app">
@@ -35,42 +35,39 @@
 
       <div id="hintLayer" class="hint-layer"></div>
 
-      <!-- القائمة الرئيسية -->
-      <div id="menu" class="overlay show">
-        <div class="panel">
-          <button id="langBtn" class="lang-btn" aria-label="language">
+      <!-- الشاشة الرئيسية — واجهة احترافية فوق مشهد الطريق الحيّ -->
+      <div id="menu" class="overlay menu-home show">
+        <div class="home-scrim"></div>
+
+        <!-- الشريط العلوي: إعدادات · إحصاءات · لغة -->
+        <div class="home-top">
+          <button id="settingsBtn" class="icon-btn" aria-label="settings">
+            <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm8.9 3.5c0-.5-.05-1-.13-1.5l1.9-1.45-1.9-3.3-2.24.9a7 7 0 0 0-2.6-1.5L13.5 2.5h-3l-.43 2.65a7 7 0 0 0-2.6 1.5l-2.24-.9-1.9 3.3L5.23 10.5c-.08.5-.13 1-.13 1.5s.05 1 .13 1.5l-1.9 1.45 1.9 3.3 2.24-.9a7 7 0 0 0 2.6 1.5l.43 2.65h3l.43-2.65a7 7 0 0 0 2.6-1.5l2.24.9 1.9-3.3-1.9-1.45c.08-.5.13-1 .13-1.5z"/></svg>
+          </button>
+          <div class="home-chips">
+            <div class="chip">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M6 3h12v2h4v3.2c0 2.6-2 4.7-4.6 4.9A6 6 0 0 1 13 16.9V19h3.2v2.5H7.8V19H11v-2.1a6 6 0 0 1-4.4-3.8C4 12.9 2 10.8 2 8.2V5h4V3zm-2 4.5v.7c0 1.2.8 2.2 2 2.6V7.5H4zm16 0h-2v3.3c1.2-.4 2-1.4 2-2.6v-.7z"/></svg>
+              <span id="menuBest">0</span>
+            </div>
+            <div class="chip chip-coins">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="currentColor"/><path fill="#0f1e33" d="m12 6.5 1.6 3.3 3.6.5-2.6 2.5.6 3.6-3.2-1.7-3.2 1.7.6-3.6-2.6-2.5 3.6-.5z"/></svg>
+              <span id="menuCoins">0</span>
+            </div>
+          </div>
+          <button id="langBtn" class="icon-btn" aria-label="language">
             <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm0 0c2.5 2.3 3.8 5.6 3.8 9s-1.3 6.7-3.8 9c-2.5-2.3-3.8-5.6-3.8-9S9.5 5.3 12 3zM3.5 9h17M3.5 15h17"/></svg>
           </button>
-          <h1 class="logo" data-i18n="title">Cargo Courier</h1>
-          <p class="tagline" data-i18n="tagline"></p>
+        </div>
 
-          <div class="rules">
-            <div class="rule">
-              <span class="dot dot-o"></span><span class="dot dot-w"></span><span class="dot dot-b"></span>
-              <span data-i18n="rule1"></span>
-            </div>
-            <div class="rule"><span class="dot dot-k"></span> <span data-i18n="rule2"></span></div>
-            <div class="rule rule-ctl">
-              <svg viewBox="0 0 24 24" class="ic"><path fill="currentColor" d="M7.4 8.6 4 12l3.4 3.4 1.4-1.4-1-1h8.4l-1 1 1.4 1.4L20 12l-3.4-3.4-1.4 1.4 1 1H7.8l1-1z"/></svg>
-              <span data-i18n="ctlSwipe"></span>&nbsp;·&nbsp;
-              <svg viewBox="0 0 24 24" class="ic"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 7a4.2 4.2 0 0 1 8.4 0"/><path fill="currentColor" d="M11 7a1.3 1.3 0 0 1 2.6 0v6l2.9.8c1 .3 1.6 1.2 1.4 2.2l-.5 2.6c-.2.9-1 1.6-1.9 1.6h-4.2c-.6 0-1.1-.2-1.5-.7l-3.2-3.9c-.5-.6-.4-1.5.2-2 .5-.4 1.3-.4 1.8.1l1.4 1.4z"/></svg>
-              <span data-i18n="ctlTap"></span>
-            </div>
-          </div>
+        <!-- الشعار -->
+        <div class="home-hero">
+          <h1 class="home-logo" data-i18n="title">Cargo Courier</h1>
+          <p class="home-tagline" data-i18n="tagline"></p>
+        </div>
 
-          <div class="menu-stats">
-            <div class="mstat">
-              <span class="mstat-label" data-i18n="statBest"></span>
-              <span id="menuBest" class="mstat-value">0</span>
-            </div>
-            <div class="mstat">
-              <span class="mstat-label" data-i18n="statCoins"></span>
-              <span id="menuCoins" class="mstat-value mstat-coins">0</span>
-            </div>
-          </div>
-
-          <!-- مهمة اليوم -->
-          <div class="mission">
+        <!-- المنطقة السفلية: مهمة + لعب + خيارات -->
+        <div class="home-bottom">
+          <div class="mission home-mission">
             <div class="mission-head">
               <span class="mission-title" data-i18n="missionTitle"></span>
               <span id="missionProg" class="mission-prog">0/0</span>
@@ -80,19 +77,26 @@
             <button id="missionClaim" class="btn-mission" style="display:none"></button>
           </div>
 
-          <!-- ورشة الطلاء -->
-          <div class="store-head" data-i18n="storeTitle"></div>
-          <div id="paintRow" class="paint-row"></div>
+          <button id="playBtn" class="btn btn-giant btn-play">
+            <svg viewBox="0 0 24 24" class="ic"><path fill="currentColor" d="M8 5.4v13.2c0 .8.9 1.3 1.6.9l10.6-6.6c.7-.4.7-1.4 0-1.8L9.6 4.5c-.7-.4-1.6.1-1.6.9z"/></svg>
+            <span data-i18n="play"></span>
+          </button>
 
           <button id="shieldBtn" class="btn btn-shield">
             <svg viewBox="0 0 24 24" class="ic"><path fill="currentColor" d="M12 2 4.5 5v6.1c0 4.8 3.2 9.3 7.5 10.9 4.3-1.6 7.5-6.1 7.5-10.9V5L12 2zm3.4 7.6-4.1 4.7a1 1 0 0 1-1.5 0l-1.9-2.1 1.2-1.1 1.5 1.6 3.6-4.2 1.2 1.1z"/></svg>
             <span class="shield-txt"><span id="shieldMain"></span><small id="shieldSub"></small></span>
           </button>
 
-          <button id="playBtn" class="btn btn-giant">
-            <svg viewBox="0 0 24 24" class="ic"><path fill="currentColor" d="M2.5 6.8c0-.9.7-1.6 1.6-1.6h8.8c.9 0 1.6.7 1.6 1.6v8H2.5v-8zM16 9h2.4c.5 0 .9.2 1.2.6l1.9 2.5c.2.3.3.6.3 1v1.7H16V9zM6 19.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zm11.5 0a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2z"/></svg>
-            <span data-i18n="play"></span>
-          </button>
+          <div class="home-pills">
+            <button id="howBtn" class="pill">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 15.2a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6zm1.8-5.6c-.7.5-.9.8-.9 1.4v.4h-1.8v-.5c0-1.2.5-1.9 1.4-2.5.7-.5 1-.8 1-1.4 0-.7-.6-1.2-1.4-1.2-.7 0-1.3.4-1.5 1.2l-1.7-.5C9.2 7.6 10.4 6.7 12 6.7c1.8 0 3.2 1.1 3.2 2.8 0 1.2-.6 1.8-1.4 2.3z"/></svg>
+              <span data-i18n="howBtn"></span>
+            </button>
+            <button id="garageBtn" class="pill">
+              <svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.6 3.4a2 2 0 0 0-2.8 0L4 14.2 3 21l6.8-1L20.6 9.2a2 2 0 0 0 0-2.8l-3-3zM6.6 18.6l-1.2-1.2.6-.6 1.2 1.2-.6.6zm10.9-9.9-8 8-1.4-1.4 8-8 1.4 1.4z"/></svg>
+              <span data-i18n="garageBtn"></span>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -139,6 +143,63 @@
       </div>
 
       <div id="countdown" class="countdown"></div>
+
+      <!-- الإعدادات -->
+      <div id="settingsScreen" class="overlay">
+        <div class="panel">
+          <h2 class="panel-title" data-i18n="settingsTitle"></h2>
+          <div class="setting-row">
+            <span class="setting-name"><svg viewBox="0 0 24 24" class="ic"><path fill="currentColor" d="M4 9v6h4l5 5V4L8 9H4zm13.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM15 3.2v2.1c2.9.9 5 3.5 5 6.7s-2.1 5.8-5 6.7v2.1c4-.9 7-4.5 7-8.8s-3-7.9-7-8.8z"/></svg><span data-i18n="soundLabel"></span></span>
+            <button id="soundToggle" class="toggle" aria-label="sound"><span class="knob"></span></button>
+          </div>
+          <div class="setting-row">
+            <span class="setting-name"><svg viewBox="0 0 24 24" class="ic"><path fill="currentColor" d="M0 12l3-4v8zm24 0l-3 4V8zM16 3H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 15H8V6h8z"/></svg><span data-i18n="vibrateLabel"></span></span>
+            <button id="vibrateToggle" class="toggle" aria-label="vibrate"><span class="knob"></span></button>
+          </div>
+          <button id="settingsLangBtn" class="setting-link">
+            <svg viewBox="0 0 24 24" class="ic"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm0 0c2.5 2.3 3.8 5.6 3.8 9s-1.3 6.7-3.8 9c-2.5-2.3-3.8-5.6-3.8-9S9.5 5.3 12 3zM3.5 9h17M3.5 15h17"/></svg>
+            <span data-i18n="langLabel"></span>
+          </button>
+          <a class="setting-link" href="https://aliorini1996-sudo.github.io/cargo-courier/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="ic"><path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            <span data-i18n="privacyLabel"></span>
+          </a>
+          <button id="settingsClose" class="btn btn-giant" data-i18n="closeBtn"></button>
+        </div>
+      </div>
+
+      <!-- كيفية اللعب -->
+      <div id="howScreen" class="overlay">
+        <div class="panel">
+          <h2 class="panel-title" data-i18n="howTitle"></h2>
+          <div class="rules">
+            <div class="rule">
+              <span class="dot dot-o"></span><span class="dot dot-w"></span><span class="dot dot-b"></span>
+              <span data-i18n="rule1"></span>
+            </div>
+            <div class="rule"><span class="dot dot-k"></span> <span data-i18n="rule2"></span></div>
+            <div class="rule rule-ctl">
+              <svg viewBox="0 0 24 24" class="ic"><path fill="currentColor" d="M7.4 8.6 4 12l3.4 3.4 1.4-1.4-1-1h8.4l-1 1 1.4 1.4L20 12l-3.4-3.4-1.4 1.4 1 1H7.8l1-1z"/></svg>
+              <span data-i18n="ctlSwipe"></span>
+            </div>
+            <div class="rule rule-ctl">
+              <svg viewBox="0 0 24 24" class="ic"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 7a4.2 4.2 0 0 1 8.4 0"/><path fill="currentColor" d="M11 7a1.3 1.3 0 0 1 2.6 0v6l2.9.8c1 .3 1.6 1.2 1.4 2.2l-.5 2.6c-.2.9-1 1.6-1.9 1.6h-4.2c-.6 0-1.1-.2-1.5-.7l-3.2-3.9c-.5-.6-.4-1.5.2-2 .5-.4 1.3-.4 1.8.1l1.4 1.4z"/></svg>
+              <span data-i18n="ctlTap"></span>
+            </div>
+          </div>
+          <button id="howClose" class="btn btn-giant" data-i18n="closeBtn"></button>
+        </div>
+      </div>
+
+      <!-- المرآب / ورشة الطلاء -->
+      <div id="garageScreen" class="overlay">
+        <div class="panel">
+          <h2 class="panel-title" data-i18n="garageTitle"></h2>
+          <div class="store-head" data-i18n="storeTitle"></div>
+          <div id="paintRow" class="paint-row"></div>
+          <button id="garageClose" class="btn btn-giant" data-i18n="closeBtn"></button>
+        </div>
+      </div>
 
       <!-- مبدّل اللغة: عشر لغات -->
       <div id="langScreen" class="overlay">
