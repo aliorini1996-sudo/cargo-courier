@@ -6,60 +6,13 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
     />
-    <meta name="theme-color" content="#0f1d38" />
+    <meta name="theme-color" content="#1b1e28" />
     <title>موصل الشحنات — Cargo Courier</title>
-    <!-- الهوية البصرية الرسمية: Fredoka (واجهة) · Nunito (نصوص) · Luckiest Guy (شعار/أرقام) · Tajawal (عربي) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Luckiest+Guy&family=Tajawal:wght@400;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" crossorigin src="./assets/index-B92LTm73.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Cme8A6vX.css">
+    <script type="module" crossorigin src="./assets/index-vUmnqFIC.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-O7pLVYpO.css">
   </head>
   <body>
     <div id="app">
-      <div id="verTag">🔎 تشخيص اللمس id10</div>
-      <script>
-        (function () {
-          var lines = [];
-          var box;
-          function add(t) {
-            lines.unshift(t);
-            if (lines.length > 9) lines.pop();
-            if (box) box.textContent = lines.join('\n');
-          }
-          function mount() {
-            box = document.createElement('div');
-            box.id = 'tapLog';
-            box.style.cssText =
-              'position:fixed;top:70px;left:6px;right:6px;z-index:100000;background:rgba(0,0,0,.86);' +
-              'color:#38ff7a;font:11px/1.4 ui-monospace,monospace;padding:8px 10px;border-radius:10px;' +
-              'max-height:34vh;overflow:auto;pointer-events:none;white-space:pre-wrap;direction:ltr;text-align:left';
-            document.body.appendChild(box);
-            add('READY — tap the PLAY button now');
-          }
-          if (document.body) mount();
-          else window.addEventListener('DOMContentLoaded', mount);
-          ['touchstart', 'pointerdown', 'mousedown', 'pointerup', 'touchend', 'click'].forEach(function (type) {
-            window.addEventListener(
-              type,
-              function (e) {
-                var t = e.target;
-                var id = !t ? '?' : t.id ? '#' + t.id : (typeof t.className === 'string' && t.className ? '.' + t.className.split(' ')[0] : (t.tagName || '?'));
-                add(type + ' -> ' + id);
-              },
-              true
-            );
-          });
-          // اكشف إن كان أي شيء يمنع الافتراضي على playBtn
-          window.addEventListener('DOMContentLoaded', function () {
-            var p = document.getElementById('playBtn');
-            if (p) p.addEventListener('click', function () { add('*** playBtn CLICK handler fired ***'); });
-          });
-        })();
-      </script>
       <canvas id="game"></canvas>
 
       <!-- شريط علوي: النقاط + شريط تقدّم نحو الرقم القياسي -->
@@ -82,33 +35,23 @@
 
       <div id="hintLayer" class="hint-layer"></div>
 
-      <!-- الشاشة الرئيسية — مشهد اللعبة (أعلى) + أزرار حقيقية تعمل (أسفل) -->
+      <!-- الشاشة الرئيسية — صورة اللعبة كاملة + أزرار شفافة فوق المرسومة -->
       <div id="menu" class="overlay menu-home show">
         <div class="home-stage">
-          <div class="home-scene-wrap">
-            <img class="home-scene" src="home-scene.webp" alt="Cargo Courier" draggable="false" />
-            <!-- أيقونات عائمة أعلى الزوايا -->
+          <div class="home-board">
+            <img class="home-bg" src="home.webp" alt="Cargo Courier" draggable="false" />
+
+            <!-- أزرار حقيقية شفافة فوق الأزرار المرسومة (قِيست مواضعها من البكسل) -->
+            <button id="playBtn" class="ov-btn ov-play" aria-label="Play"></button>
+            <button id="garageBtn" class="ov-btn ov-garage" aria-label="Garage"></button>
+            <button id="howBtn" class="ov-btn ov-how" aria-label="How to play"></button>
+
+            <!-- أيقونات عائمة أعلى الزوايا فوق السماء -->
             <button id="settingsBtn" class="ov-icon ov-settings" aria-label="settings">
               <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm8.9 3.5c0-.5-.05-1-.13-1.5l1.9-1.45-1.9-3.3-2.24.9a7 7 0 0 0-2.6-1.5L13.5 2.5h-3l-.43 2.65a7 7 0 0 0-2.6 1.5l-2.24-.9-1.9 3.3L5.23 10.5c-.08.5-.13 1-.13 1.5s.05 1 .13 1.5l-1.9 1.45 1.9 3.3 2.24-.9a7 7 0 0 0 2.6 1.5l.43 2.65h3l.43-2.65a7 7 0 0 0 2.6-1.5l2.24.9 1.9-3.3-1.9-1.45c.08-.5.13-1 .13-1.5z"/></svg>
             </button>
             <button id="langBtn" class="ov-icon ov-lang" aria-label="language">
               <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zm0 0c2.5 2.3 3.8 5.6 3.8 9s-1.3 6.7-3.8 9c-2.5-2.3-3.8-5.6-3.8-9S9.5 5.3 12 3zM3.5 9h17M3.5 15h17"/></svg>
-            </button>
-          </div>
-
-          <!-- أزرار حقيقية بأسلوب الهوية — تعمل دائمًا -->
-          <div class="home-menu">
-            <button id="playBtn" class="hbtn hbtn-play">
-              <span class="hbtn-label" data-i18n="play">PLAY</span>
-              <span class="hbtn-ic hbtn-ic-r"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.4v13.2c0 .8.9 1.3 1.6.9l10.6-6.6c.7-.4.7-1.4 0-1.8L9.6 4.5c-.7-.4-1.6.1-1.6.9z"/></svg></span>
-            </button>
-            <button id="garageBtn" class="hbtn hbtn-cobalt">
-              <span class="hbtn-ic"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 3 3 9v11a1 1 0 0 0 1 1h4v-6h8v6h4a1 1 0 0 0 1-1V9zM8.5 13h7v1.6h-7zm0 3h7v1.6h-7z"/></svg></span>
-              <span class="hbtn-label" data-i18n="garageBtn">GARAGE</span>
-            </button>
-            <button id="howBtn" class="hbtn hbtn-grass">
-              <span class="hbtn-ic"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M11 5.2C9.2 4.1 6.6 3.7 4.3 4.1a1 1 0 0 0-.8 1V18a1 1 0 0 0 1.2 1c2-.4 4.3 0 5.8 1 .3.2.7.2 1 0 1.5-1 3.8-1.4 5.8-1a1 1 0 0 0 1.2-1V5.1a1 1 0 0 0-.8-1c-2.3-.4-4.9 0-6.7 1.1zM11 7v11c-1.6-.8-3.6-1.1-5.5-.9V6.1c1.9-.2 3.9.1 5.5.9z"/></svg></span>
-              <span class="hbtn-label" data-i18n="howBtn">HOW TO PLAY</span>
             </button>
           </div>
         </div>
@@ -240,6 +183,6 @@
 
       <div id="banner" class="banner" data-i18n="banner"></div>
     </div>
-
+
   </body>
 </html>
