@@ -20,7 +20,46 @@
   </head>
   <body>
     <div id="app">
-      <div id="verTag">✅ أزرار حقيقية id9</div>
+      <div id="verTag">🔎 تشخيص اللمس id10</div>
+      <script>
+        (function () {
+          var lines = [];
+          var box;
+          function add(t) {
+            lines.unshift(t);
+            if (lines.length > 9) lines.pop();
+            if (box) box.textContent = lines.join('\n');
+          }
+          function mount() {
+            box = document.createElement('div');
+            box.id = 'tapLog';
+            box.style.cssText =
+              'position:fixed;top:70px;left:6px;right:6px;z-index:100000;background:rgba(0,0,0,.86);' +
+              'color:#38ff7a;font:11px/1.4 ui-monospace,monospace;padding:8px 10px;border-radius:10px;' +
+              'max-height:34vh;overflow:auto;pointer-events:none;white-space:pre-wrap;direction:ltr;text-align:left';
+            document.body.appendChild(box);
+            add('READY — tap the PLAY button now');
+          }
+          if (document.body) mount();
+          else window.addEventListener('DOMContentLoaded', mount);
+          ['touchstart', 'pointerdown', 'mousedown', 'pointerup', 'touchend', 'click'].forEach(function (type) {
+            window.addEventListener(
+              type,
+              function (e) {
+                var t = e.target;
+                var id = !t ? '?' : t.id ? '#' + t.id : (typeof t.className === 'string' && t.className ? '.' + t.className.split(' ')[0] : (t.tagName || '?'));
+                add(type + ' -> ' + id);
+              },
+              true
+            );
+          });
+          // اكشف إن كان أي شيء يمنع الافتراضي على playBtn
+          window.addEventListener('DOMContentLoaded', function () {
+            var p = document.getElementById('playBtn');
+            if (p) p.addEventListener('click', function () { add('*** playBtn CLICK handler fired ***'); });
+          });
+        })();
+      </script>
       <canvas id="game"></canvas>
 
       <!-- شريط علوي: النقاط + شريط تقدّم نحو الرقم القياسي -->
